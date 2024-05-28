@@ -1,0 +1,28 @@
+.footer {
+    margin-top: 0px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    .p-footer {
+        font-family: "Merienda";
+        text-align: center;
+        font-size: 13px;
+        line-height: 30px;
+        color: rgba(255, 255, 255, 0.856);
+
+        a {
+            color: rgba(255, 255, 255, 0.649);
+            padding-top: 13px;
+            text-decoration: none;
+            transition: color 0.2s linear;
+
+            &:hover{
+                color: white;
+            }
+
+        }
+    }
+
+}

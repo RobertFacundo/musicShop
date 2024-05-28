@@ -1,0 +1,80 @@
+{
+    "cuerdas": [
+      {
+        "id": 1,
+        "nombre": "Guitarra Clásica La Patrie",
+        "precio": 1200,
+        "descripcion": "Una guitarra clásica de alta calidad fabricada con madera de cedro.",
+        "imagen": "./images/guitarra_clasica_la_patrie.jpg"
+      },
+      {
+        "id": 2,
+        "nombre": "Guitarra Hummingbird",
+        "precio": 1500,
+        "descripcion": "Una guitarra acústica icónica conocida por su tono cálido y resonante.",
+        "imagen": "./images/guitarra_hummingbird.jpg"
+      },
+      {
+        "id": 3,
+        "nombre": "Piano Steinway",
+        "precio": 8000,
+        "descripcion": "Un piano de cola Steinway & Sons de la más alta calidad, ideal para conciertos.",
+        "imagen": "./images/piano_steinway.jpg"
+      }
+    ],
+    "aire": [
+      {
+        "id": 1,
+        "nombre": "Saxofón",
+        "precio": 900,
+        "descripcion": "Un saxofón de calidad profesional, ideal para jazz y música clásica.",
+        "imagen": "./images/saxofon.jpg"
+      },
+      {
+        "id": 2,
+        "nombre": "Trompeta",
+        "precio": 700,
+        "descripcion": "Una trompeta de bronce con un sonido claro y potente.",
+        "imagen": "./images/trompeta.jpg"
+      }
+    ],
+    "percusion": [
+      {
+        "id": 1,
+        "nombre": "Batería",
+        "precio": 1500,
+        "descripcion": "Un set completo de batería acústica con platillos y hardware incluido.",
+        "imagen": "./images/bateria.jpg"
+      },
+      {
+        "id": 2,
+        "nombre": "Batería Electrónica",
+        "precio": 1200,
+        "descripcion": "Una batería electrónica con múltiples configuraciones de sonido.",
+        "imagen": "./images/bateria_electronica.jpg"
+      }
+    ],
+    "electronicos": [
+      {
+        "id": 1,
+        "nombre": "Teclado Yamaha",
+        "precio": 600,
+        "descripcion": "Un teclado electrónico con múltiples sonidos y funciones.",
+        "imagen": "./images/teclado_yamaha.jpg"
+      },
+      {
+        "id": 2,
+        "nombre": "Sintetizador Moog",
+        "precio": 1200,
+        "descripcion": "Un sintetizador analógico con capacidades de modulación avanzadas.",
+        "imagen": "./images/sintetizador_moog.jpg"
+      },
+      {
+        "id": 3,
+        "nombre": "Theremin",
+        "precio": 1000,
+        "descripcion": "Un instrumento electrónico único que se toca moviendo las manos cerca de dos antenas.",
+        "imagen": "./images/theremin.jpg"
+      }
+    ]
+  }
