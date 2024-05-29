@@ -22,7 +22,6 @@
 
 body {
     background-image: linear-gradient(to bottom, #111214, #1b1d1e, #242828, #303331, #3d3e3b);
-    height: 100vh;
 
     .floating-button {
         position: fixed;
@@ -40,6 +39,7 @@ body {
         justify-content: center;
         cursor: pointer;
         transition: transform 0.2s linear;
+        z-index: 10;
 
         &:hover {
             transform: scale(1.05);
