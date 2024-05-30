@@ -1,55 +1,204 @@
-.container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    .producto {
+.main {
+    .container {
         display: flex;
-        width: 27%;
-        color: white;
-        font-family: "Merienda", cursive;
-        // border: 1px solid white;
-        margin: 20px;
-        padding: 13px;
-        flex-direction: column;
-        align-items: center;
-        transition: all 0.39s linear;
-        &:hover{
-          transform: scale(1.013);
-          border: 1px solid white;
-        }
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
 
-        img {
-            height: 400px;
-            max-width: 100%;
-        }
-        p{
-            padding: 5px;
-        }
-        .desc{
-            text-align: center;
-        }
-        .agregar-al-carrito{
+        .producto {
+            display: flex;
+            width: 27%;
             color: white;
-            font-size: 39px;
-            cursor: pointer;
-            margin: 5px;
-            &:hover{
-                transform: scale(1.1);
-                &::after {
-                    content: "Agregar al carrito"; /* Contenido del tooltip */
-                    position: absolute; /* Establece el posicionamiento absoluto */
-                    width: 127px;
-                    left: 100%; /* Centra el tooltip horizontalmente */
-                    background-image: linear-gradient(to top, #111214, #1b1d1e, #242828, #303331, #3d3e3b);
-                    color: rgb(206, 206, 206); /* Color del texto del tooltip */
-                    padding: 5px 10px; /* Espaciado interno del tooltip */
-                    border-radius: 5px; /* Borde redondeado */
-                    font-size: 14px; /* Tamaño de fuente del tooltip */
-                    z-index: 1; /* Asegura que el tooltip esté encima del contenido */
+            font-family: "Merienda", cursive;
+            // border: 1px solid white;
+            margin: 20px;
+            padding: 13px;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.39s linear;
+
+            &:hover {
+                transform: scale(1.013);
+                border: 1px solid white;
+            }
+
+            img {
+                height: 400px;
+                max-width: 100%;
+                cursor: pointer;
+            }
+
+            p {
+                padding: 5px;
+            }
+
+            .desc {
+                text-align: center;
+            }
+
+            .agregar-al-carrito {
+                color: white;
+                font-size: 39px;
+                cursor: pointer;
+                margin: 5px;
+
+                &:hover {
+                    transform: scale(1.1);
+
+                    &::after {
+                        content: "Agregar al carrito";
+                        /* Contenido del tooltip */
+                        position: absolute;
+                        /* Establece el posicionamiento absoluto */
+                        width: 127px;
+                        left: 100%;
+                        /* Centra el tooltip horizontalmente */
+                        background-image: linear-gradient(to top, #111214, #1b1d1e, #242828, #303331, #3d3e3b);
+                        color: rgb(206, 206, 206);
+                        /* Color del texto del tooltip */
+                        padding: 5px 10px;
+                        /* Espaciado interno del tooltip */
+                        border-radius: 5px;
+                        /* Borde redondeado */
+                        font-size: 14px;
+                        /* Tamaño de fuente del tooltip */
+                        z-index: 1;
+                        /* Asegura que el tooltip esté encima del contenido */
+                    }
                 }
             }
         }
     }
+
+    .fullscreen-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.397);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+
+        .fullscreen-image {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+    .modal-content {
+        background-image: linear-gradient(to left bottom, #cdc7cb, #c2bec3, #b8b6ba, #aeadb1, #a4a5a8, #9b9d9f, #929597, #8a8d8e, #808384, #767979, #6d706f, #646665);
+        margin: 39px;
+        margin-left: 329px;
+        padding: 20px;
+        padding-right: 0px;
+        border: 1px solid #888;
+        border-radius: 15px;
+        width: 57%;
+        height: 80vh;
+
+        .botones {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            bottom: 0;
+
+            button {
+                background-color: transparent;
+                border: none;
+
+                .fa-trash-can,
+                .fa-check {
+                    @extend %botones;
+                }
+            }
+        }
+
+        .total {
+            display: block;
+            text-align: center;
+            font-family: "Merienda";
+            font-size: 23px;
+            color: #353434;
+            padding-bottom: 5px;
+        }
+
+        .productosC {
+            max-height: 410px;
+            overflow-y: scroll;
+            padding-right: 18px;
+            .producto-en-carrito {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                font-family: "Merienda";
+
+                img {
+                    width: 180px;
+                }
+
+
+                button {
+                    background-color: transparent;
+                    border: none;
+
+                    .fa-solid,
+                    .fa-xmark {
+                        font-size: 23px;
+                        color: rgba(255, 255, 255, 0.701);
+                        transition: color 0.2s linear;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .close {
+        color: #5a5858;
+        float: right;
+        padding-right: 13px;
+        font-size: 28px;
+        font-weight: bold;
+
+        &:hover,
+        &:focus {
+            color: rgba(0, 0, 0, 0.849);
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    .h1 {
+        color: #353434;
+        font-family: "Merienda";
+        font-size: 39px;
+        text-align: center;
+        text-shadow: -2px -2px 9px rgba(30, 30, 30, 0.849);
+    }
+}
+
+.my-swal-font {
+    font-family: "Merienda";
 }

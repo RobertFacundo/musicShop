@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="multimedia/piano.png" type="image/x-icon">
     <script src="./js/productos.js"></script>
+    <script src="./js/fullscreen.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/carrito.js"></script>
+    <script src="https://kit.fontawesome.com/8adb0d4670.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Music Shop</title>
 </head>
+
 <body>
     <header class="header">
         <ul class="nav">
-            <li>Cuerda</li>
-            <li>Percusión</li>
-            <li>Electrónico</li>
-            <li>Aire</li>
+            <li id="cuerdas">Cuerdas</li>
+            <li id="percusion">Percusión</li>
+            <li id="electronicos">Electrónico</li>
+            <li id="aire">Aire</li>
         </ul>
         <img class="logo" src="./multimedia/logo.png" alt="">
     </header>
@@ -22,13 +29,31 @@
         <img src="./multimedia/shopping-cart.png" alt="">
         <div class="cart-counter" id="cart-counter">0</div>
     </button>
-    <main>
+    <div id="modal-cart" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- Contenido del carrito de compras aquí -->
+            <h1 class="h1">Tu Carrito</h1>
+            <div class="productosC">
+            </div>
+            <span id="total" class="total">...</span>
+            <div class="botones">
+                <button><i id="realizar-pedido" class="fa-solid fa-check"></i></button>
+                <button><i id="vaciar-carrito" class="fa-regular fa-trash-can"></i></button>
+            </div>
+        </div>
+    </div>
+    <main class="main">
         <div id="contenedor-productos" class="container"></div>
+        <div id="fullscreen-container" class="fullscreen-container">
+            <img id="fullscreen-image" class="fullscreen-image" src="" alt="Fullscreen Image">
+        </div>
     </main>
     <footer class="footer">
         <p class="p-footer">&copy; Todos los derechos reservados 2024 | Desarrollado por <a
                 href="https://www.linkedin.com/in/robertfacundofrontend/" target="_blank">Robert</a>
         </p>
-    </footer> 
+    </footer>
 </body>
+
 </html>

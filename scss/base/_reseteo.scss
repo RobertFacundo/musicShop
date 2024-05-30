@@ -48,17 +48,18 @@ body {
         .cart-counter {
             font-family: "Merienda", cursive;
             position: absolute;
-            top: 5px;
+            top: 3px;
             right: 21px;
             background-color: transparent;
             color: rgb(226, 222, 222);
             border-radius: 50%;
             width: 20px;
             height: 20px;
-            display: flex;
             align-items: center;
             justify-content: center;
             font-size: 18px;
+            display: none;
+        
         }
         img{
            width: 35px; 

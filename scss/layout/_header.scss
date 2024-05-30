@@ -1,13 +1,17 @@
 .header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 13px;
+    // position: fixed;
+    // z-index: 13;
+    // top: 0;
     .nav{
         color: white;
         display: flex;
         font-size: 27px;
         align-items: center;
         margin-top: 10px;
+        padding-left: 115px;
         li{
             list-style-type: none;
             margin: 5px 30px;
@@ -23,6 +27,6 @@
     }
     .logo{
         width: 310px;
-        margin-right: 100px;
+        padding-right: 239px;
     }
 }

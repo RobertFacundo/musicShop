@@ -1,0 +1,15 @@
+%botones{
+    font-size: 39px;
+    color: rgba(255, 255, 255, 0.701);
+    padding-right: 13px;
+    margin: 5px 30px;
+    transition: color 0.4s linear;
+    cursor: pointer;
+
+    &:hover {
+        color: transparent;
+        background-image: radial-gradient(circle, #8f8b8b, #7e7a7a, #6d6a6a, #5d5a5a, #4d4b4b, #4b4949, #494747, #474545, #525050, #5d5b5b, #686666, #737272);
+        -webkit-background-clip: text; // Esto hace que el gradiente afecte solo al texto
+        background-clip: text;
+    }
+}
